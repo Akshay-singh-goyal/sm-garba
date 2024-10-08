@@ -1,0 +1,108 @@
+/* client/src/components/Contact.css */
+
+/* Navbar Styles */
+.navbar {
+  width: 100%;
+  background-color: #343a40; /* Dark background for the navbar */
+  padding: 15px 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 1.5rem; /* Larger font for the title */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+  color: #ffc107; /* Accent color on hover */
+}
+
+/* Booking Form Container */
+.booking-form-container {
+  max-width: 600px; /* Set a max width for the form */
+  margin: 40px auto; /* Center the form on the page with more space */
+  padding: 20px;
+  background-color: #ffffff; /* White background for the form */
+  border-radius: 8px; /* Slightly round the corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow for better elevation */
+  transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+}
+
+.booking-form-container:hover {
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); /* Elevate on hover */
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-form input,
+.booking-form textarea {
+  width: 100%; /* Full width for inputs */
+  padding: 12px; /* Slightly more padding for better touch targets */
+  margin: 10px 0; /* Space between inputs */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem; /* Larger font size for readability */
+  transition: border-color 0.3s; /* Smooth border transition */
+}
+
+.booking-form input:focus,
+.booking-form textarea:focus {
+  border-color: #28a745; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+.booking-form button {
+  padding: 12px;
+  background-color: #28a745; /* Green background for submit button */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem; /* Consistent font size */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.booking-form button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+/* Footer Styles */
+.footer {
+  width: 100%;
+  background-color: #343a40; /* Dark background for the footer */
+  color: white;
+  text-align: center;
+  padding: 15px 0; /* Slightly larger padding for better spacing */
+  position: relative;
+  bottom: 0;
+}
+
+/* Optional Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .navbar, .footer {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .booking-form-container {
+    margin: 20px; /* Reduce margin for smaller screens */
+  }
+
+  .booking-form button {
+    font-size: 0.9rem; /* Slightly smaller button text */
+  }
+}

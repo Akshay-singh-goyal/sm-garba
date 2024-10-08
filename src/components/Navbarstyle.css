@@ -1,0 +1,77 @@
+/* Navbarstyle.css */
+.navbar {
+    width: 80px;
+    height: 60px;
+    display: flex;
+    align-items: right;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #333; /* Dark background */
+}
+
+.logo-container {
+    flex: 0 0 auto; /* Prevent the logo section from growing */
+    width: 120px; /* Fixed width for logo section */
+    display:block;
+    margin-top: 60px;
+    position: relative;
+}
+
+.logo img {
+    max-width: 100%; /* Ensure logo is responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.hamburger {
+    display: none; /* Hide hamburger menu by default */
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    transition: max-height 0.3s ease;
+}
+
+.nav-menu li {
+    width: 120px; /* Fixed width for each link */
+    
+}
+
+.nav-menu a {
+    display: block; /* Makes the entire link clickable */
+    text-align: center; /* Center text within the link */
+    color: #fff; /* White text */
+    text-decoration: none;
+    padding: 0.5rem 0; /* Padding for clickable area */
+}
+
+.nav-menu.active {
+    display: flex; /* Show menu when active */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger menu on smaller screens */
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 60px; /* Adjust based on navbar height */
+        left: 0;
+        right: 0;
+        background-color: #444; /* Darker background for mobile */
+        flex-direction: column;
+        max-height: 0; /* Initially hidden */
+        overflow: hidden;
+    }
+
+    .nav-menu.active {
+        max-height: 300px; /* Expand height when active */
+    }
+
+    .nav-menu li {
+        width: 100%; /* Full width for mobile links */
+    }
+}

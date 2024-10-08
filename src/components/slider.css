@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.navbar {
+  position: fixed; /* Keep the navbar at the top */
+  width: var(--widths);
+  height: 60px; /* Fixed height for navbar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+:root {
+  --heights: 90vh;
+  --widths: 100%;
+}
+
+.slider-container {
+  height: var(--heights);
+  width: var(--widths);
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  
+}
+
+.active {
+  display: inline-block;
+  transition: opacity 0.5s ease-in-out; /* Fade transition for active slide */
+}
+
+.inactive {
+  display: none;
+}
+
+.slides {
+  height: var(--heights);
+  width: var(--widths);
+  position: relative;
+}
+
+.slide-image {
+  width: 100%;  /* Decrease the width of images to 80% */
+  height: auto; /* Maintain aspect ratio */
+  position: absolute;
+  left: 50%;  /* Center the images */
+  top: 50%;   /* Center the images */
+  transform: translate(-50%, -50%); /* Adjust position to be centered */
+  object-fit: cover; /* Ensures images cover the container without distortion */
+  opacity: 0; /* Start with slides invisible */
+  transition: opacity 0.5s ease-in-out; /* Fade effect */
+}
+
+.active .slide-image {
+  opacity: 1; /* Fade in active slide */
+}
+
+.prev,
+.next {
+  color: transparent;
+  cursor: pointer;
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 1rem;
+  margin-top: -3rem;
+  font-size: 40px;
+  font-weight: bold;
+  border-radius: 5px; /* Unified rounding */
+}
+
+.slider-container:hover .prev,
+.slider-container:hover .next {
+  color: black;
+}
+
+.slider-container:hover .prev:hover,
+.slider-container:hover .next:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: all 0.5s ease-in;
+}
+
+.next {
+  right: 0;
+}
+
+.all-dots {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  top: 95%;
+  justify-content: center;
+  z-index: 200;
+}
+
+.dot {
+  cursor: pointer;
+  color: red;
+  height: 0.8rem;
+  width: 0.8rem;
+  margin: 0 3px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s; /* Smooth transition for dots */
+}
+
+.slider-container:hover .dot:hover {
+  background-color: red;
+}
+
+.slider-container:hover .dot {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.slider-container:hover .active-dot {
+  background-color: red;
+}
+
+.play-pause {
+  color: black;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  :root {
+    --heights: 50vh; /* Reduced height for smaller screens */
+  }
+
+  .slide-image {
+    width: 70%; /* Decrease image size on medium screens */
+  }
+
+  .prev,
+  .next {
+    font-size: 30px; /* Smaller buttons on mobile */
+  }
+
+  .dot {
+    height: 0.6rem; /* Smaller dots */
+    width: 0.6rem; /* Smaller dots */
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --heights: 40vh; /* Further reduced height for very small screens */
+  }
+
+  .slide-image {
+    width: 60%; /* Further decrease image size on small screens */
+  }
+
+  .prev,
+  .next {
+    font-size: 24px; /* Even smaller buttons */
+  }
+
+  .dot {
+    height: 0.5rem; /* Smaller dots */
+    width: 0.5rem; /* Smaller dots */
+  }
+}

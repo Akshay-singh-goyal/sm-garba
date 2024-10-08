@@ -1,0 +1,76 @@
+.gallerys {
+    width: 90%;
+    max-width: 1200px; /* Set a max width for larger screens */
+    height: auto;
+    text-align: center;
+    margin: 0 auto; /* Center the gallery */
+    padding: 20px;
+    background-color: #1a1a1a; /* Dark background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+    margin-bottom: 60px;
+}
+
+.slider {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Enable snap scrolling */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.slider::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome and Safari */
+}
+
+.slide {
+    flex: 0 0 auto; /* Prevent flex items from growing or shrinking */
+    margin: 10px;
+    cursor: pointer;
+    scroll-snap-align: start; /* Align each slide at the start */
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.slide:hover {
+    transform: scale(1.05); /* Scale up on hover for emphasis */
+}
+
+.img {
+    width: 200px; /* Set a fixed width for images */
+    height: 150px; /* Set a fixed height for images */
+    object-fit: cover; /* Maintain aspect ratio while filling the area */
+    border-radius: 8px; /* Rounded corners for images */
+    border: 2px solid #ff5722; /* Border color that matches the theme */
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Darker background for the modal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure modal is on top */
+}
+
+.modal-image {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px; /* Rounded corners for modal image */
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #ff5722; /* Change close button color */
+    font-size: 30px;
+    cursor: pointer;
+    transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+.close:hover {
+    color: #ffffff; /* Change color on hover for better visibility */
+}

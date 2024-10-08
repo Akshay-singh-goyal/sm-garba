@@ -1,13 +1,41 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+
+/* Add this to your main CSS file */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+*{
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: "Afacad Flux", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  background: black;
+}
+
+h1, h4,p,a{
+  color: #fff;
+  text-decoration: none;
+}
+
+ul{
+  list-style-type: none;
+}
+.btn{
+  padding: 12px,32px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  background: rgb(248, 217 green, 15 blue);
+  color: #222;
+  border: 1px solid #fff;
+  font-weight:  600;
+  cursor: pointer;
+}
+
+.btn-light {
+  background: rgba(255, 255 green, 255 blue, 0.2 alpha);
+  color: #fff;
+  transform: 0.3s;
 }

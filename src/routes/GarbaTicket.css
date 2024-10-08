@@ -1,0 +1,112 @@
+/* src/TicketPurchaseCenter.css */
+.ticket-purchase-center {
+    padding: 50px 30px;
+    max-width: 800px;
+    margin: auto;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+    background-color: #1a1a1a; /* Dark background */
+    border-radius: 10px; /* Rounded corners */
+    color: #f4f4f4; /* Light text color */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); /* Enhanced shadow for overall container */
+    text-align: center;
+  }
+  
+  .ticket-purchase-center h1,
+  .ticket-purchase-center h2 {
+    color: #ff6347; /* Vibrant accent color */
+    margin-bottom: 30px;
+    font-size: 2.5em; /* Larger title */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Text shadow for title */
+  }
+  
+  .ticket-form,
+  .payment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ticket-form label,
+  .payment p {
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: left;
+    font-size: 1.1em;
+  }
+  
+  .ticket-form input,
+  .ticket-form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #282828; /* Slightly lighter black for input fields */
+    color: #f4f4f4; /* Light text color */
+    font-size: 1em;
+  }
+  
+  .ticket-form input:focus,
+  .ticket-form select:focus {
+    border-color: #ff6347; /* Accent color on focus */
+    outline: none;
+  }
+  
+  .ticket-form button,
+  .approve-button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #ff6347; /* Vibrant accent color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .ticket-form button:hover,
+  .approve-button:hover {
+    background-color: #ff4500; /* Darker accent color on hover */
+  }
+  
+  .ticket-price,
+  .total-price {
+    font-size: 1.2em;
+    color: #ff6347; /* Accent color for price */
+    margin-top: -10px; /* Adjust spacing */
+    margin-bottom: 20px;
+  }
+  
+  .payment-image {
+    max-width: 300px;
+    margin: 20px 0;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .ticket-purchase-center {
+      padding: 25px; /* Less padding on smaller screens */
+    }
+  
+    .ticket-form label,
+    .payment p {
+      font-size: 1em; /* Smaller labels on mobile */
+    }
+  
+    .ticket-form button,
+    .approve-button {
+      font-size: 1em; /* Smaller button on mobile */
+    }
+  
+    .ticket-price,
+    .total-price {
+      font-size: 1em; /* Smaller price text on mobile */
+    }
+  
+    .payment-image {
+      max-width: 250px;
+    }
+  }
+  
