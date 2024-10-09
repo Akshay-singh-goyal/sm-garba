@@ -20,7 +20,7 @@ const BookingForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://sm-backend-bnsl.onrender.com/api/bookings', formData);
+      const response = await axios.post('https://sm-backend-8me3.onrender.com/api/bookings', formData);
       alert(response.data.message);
       setFormData({ name: '', email: '', whatsappnumber: '', message: '' }); // Reset form
     } catch (error) {
