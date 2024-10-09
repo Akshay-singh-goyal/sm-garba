@@ -66,7 +66,7 @@ const TicketPurchaseCenter = () => {
     console.log("Submitting ticket data:", ticketData); // Log the data being sent
   
     try {
-      const response = await fetch('https://sm-backend-bnsl.onrender.com/api/tickets', {
+      const response = await fetch('https://sm-backend-8me3.onrender.com/api/tickets', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(ticketData),
