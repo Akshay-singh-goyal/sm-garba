@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import ImageSlider from "../components/ImageSlider";
 import Eventdetails from "../components/Eventdetails"
 import Workshop from "../components/Workshop";
+import VisitorCount from "../components/VisitorCount";
 
 const albums = [
   { id: 1, title: 'Garba Nights', image: '../assets/img1.jpg' },
@@ -47,6 +48,7 @@ const Home = () => {
       </div>
       
       <ImageSlider />
+              <VisitorCount/>
       <Eventdetails/>
       <Workshop/>
       <Footer />
