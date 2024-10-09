@@ -10,7 +10,7 @@ const VisitorCount = () => {
     useEffect(() => {
         const fetchVisitorCount = async () => {
             try {
-                const response = await axios.get('https://sm-backend-bnsl.onrender.com/api/visitor-count');
+                const response = await axios.get('https://sm-backend-8me3.onrender.com/api/visitor-count');
                 setVisitorCount(response.data.count);
             } catch (error) {
                 console.error('Error fetching visitor count:', error);
